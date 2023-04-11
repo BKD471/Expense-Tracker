@@ -1,12 +1,11 @@
 import "./App.css";
-import ExpenseItem from "./component/ExpenseItem";
+import Expense from "./component/Expenses/Expenses";
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello</h1>
-      <ExpenseItem />
-    </div>
+    <>
+      <Expense />
+    </>
   );
 };
 
