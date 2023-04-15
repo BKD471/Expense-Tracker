@@ -1,13 +1,12 @@
 import ExpenseItem from "../Expenses/ExpenseItem";
-import { expenseData } from "../../util/ExpenseData";
 
 import "./Expenses.css";
 import Card from "../UI/Card";
 
-const Expense = () => {
+const Expense = ({ expenseList }) => {
   return (
     <Card className="expenses">
-      {expenseData.map((expense) => {
+      {expenseList.map((expense) => {
         return <ExpenseItem {...expense} key={expense.id} />;
       })}
     </Card>
