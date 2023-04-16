@@ -1,0 +1,8 @@
+The value used in component like the value selected in dropdown
+is passed on to parent comp through child props and is also reveived from parent compo
+This is two way data binding
+
+The expenseFilter compoent is controlled by parent expense compo
+
+when the value as well as change to the value are not handled in the compo itslef
+but in parent compo, thus that compo is said to be controlled by parent

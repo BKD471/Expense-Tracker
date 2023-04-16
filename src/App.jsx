@@ -1,9 +1,9 @@
 import "./App.css";
 
-import Expense from "./component/Expenses/Expenses";
-import NewExpense from "./component/NewExpense/NewExpense";
-import { expenseData } from "../src/util/ExpenseData";
 import { useState } from "react";
+import Expense from "./component/expenses/Expenses";
+import NewExpense from "./component/new_expense/NewExpense";
+import { expenseData } from "../src/util/ExpenseData";
 
 const App = () => {
   const [expenseList, setExpenseList] = useState(expenseData);
