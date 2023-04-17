@@ -10,7 +10,7 @@ const App = () => {
 
   const addExpenseItemHandler = (data) => {
     setExpenseList((prevState) => {
-      return [...prevState, data];
+      return [data, ...prevState];
     });
   };
 

@@ -5,19 +5,21 @@ const ExpenseFilter = ({ filteredYear, onGettingSelected }) => {
     onGettingSelected(event.target.value);
   };
 
+  const years_range = 10;
+  const current_year = new Date().getFullYear().toString();
+  const year_list = [];
+  for (let i = 0; i <= 10; i++) year_list.push(current_year - 10 + i);
+
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
         <div>Select by Year</div>
         <select value={filteredYear} onChange={dropdownChangeHandler}>
-          <option value="2023">2023</option>
-          <option value="2022">2022</option>
-          <option value="2021">2021</option>
-          <option value="2020">2020</option>
-          <option value="2019">2019</option>
-          <option value="2018">2018</option>
-          <option value="2017">2017</option>
-          <option value="2016">2016</option>
+          {year_list.reverse().map((e) => (
+            <option value={e} key={e}>
+              {e}
+            </option>
+          ))}
         </select>
       </div>
     </div>
