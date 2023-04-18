@@ -3,10 +3,10 @@ import "./App.css";
 import { useState } from "react";
 import Expense from "./component/expenses/Expenses";
 import NewExpense from "./component/new_expense/NewExpense";
-import { expenseData } from "../src/util/ExpenseData";
+import { EXPENSE_DATA } from "./util/Configs";
 
 const App = () => {
-  const [expenseList, setExpenseList] = useState(expenseData);
+  const [expenseList, setExpenseList] = useState(EXPENSE_DATA);
 
   const addExpenseItemHandler = (data) => {
     setExpenseList((prevState) => {
