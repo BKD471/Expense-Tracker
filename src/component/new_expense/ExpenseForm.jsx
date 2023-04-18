@@ -8,6 +8,9 @@ const ExpenseForm = ({ onSaveExpenseData, onCancelForm }) => {
     enteredDate: "",
   });
 
+  const maxYear = new Date().getFullYear();
+  const minYear = maxYear - 50;
+
   const titleChangeHandler = (event) => {
     setUserInput((prevState) => {
       return { ...prevState, enteredTitle: event.target.value };
@@ -75,8 +78,8 @@ const ExpenseForm = ({ onSaveExpenseData, onCancelForm }) => {
           <label>Date</label>
           <input
             type="date"
-            min="2018-12-01"
-            max="2023-12-31"
+            min={minYear + "-01-01"}
+            max={maxYear + "-12-31"}
             value={userInput.enteredDate}
             onChange={dateChangeHandler}
           />

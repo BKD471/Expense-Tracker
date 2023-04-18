@@ -5,10 +5,10 @@ const ExpenseFilter = ({ filteredYear, onGettingSelected }) => {
     onGettingSelected(event.target.value);
   };
 
-  const years_range = 10;
+  const years_range = 50;
   const current_year = new Date().getFullYear().toString();
   const year_list = [];
-  for (let i = 0; i <= 10; i++) year_list.push(current_year - 10 + i);
+  for (let i = 0; i <= 50; i++) year_list.push(current_year - 50 + i);
 
   return (
     <div className="expenses-filter">
